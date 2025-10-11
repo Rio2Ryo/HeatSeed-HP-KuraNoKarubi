@@ -5,12 +5,20 @@ const Footer = () => {
     <footer className="bg-luxury-black text-white section-padding">
       <div className="container-custom">
         {/* 予約ボタン */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 pb-6 sm:pb-8 border-b border-gold/30">
+        <div
+          className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 pb-6 sm:pb-8 border-b"
+          style={{
+            borderColor: 'rgba(212, 175, 55, 0.3)',
+          }}
+        >
           <a
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gold hover:bg-gold-dark text-luxury-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all transform hover:scale-105 text-center"
+            className="text-luxury-black px-5 sm:px-8 py-2.5 sm:py-4 rounded-full font-bold text-sm sm:text-lg transition-all transform hover:scale-105 text-center whitespace-nowrap"
+            style={{
+              background: 'linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%)',
+            }}
           >
             食べログで予約
           </a>
@@ -18,7 +26,10 @@ const Footer = () => {
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gold hover:bg-gold-dark text-luxury-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all transform hover:scale-105 text-center"
+            className="text-luxury-black px-5 sm:px-8 py-2.5 sm:py-4 rounded-full font-bold text-sm sm:text-lg transition-all transform hover:scale-105 text-center whitespace-nowrap"
+            style={{
+              background: 'linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%)',
+            }}
           >
             ぐるなびで予約
           </a>
@@ -27,7 +38,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-6 sm:mb-8">
           {/* ロゴと説明 */}
           <div className="sm:col-span-2 md:col-span-1">
-            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gold">蔵のカルビ 寒川店</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gradient-gold">蔵のカルビ 寒川店</h3>
             <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
               美味しいを、子どもにも。<br />
               高級感と家族の温かみを兼ね備えた焼肉店
@@ -36,7 +47,7 @@ const Footer = () => {
 
           {/* 店舗情報 */}
           <div>
-            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-gold">店舗情報</h4>
+            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-gradient-gold">店舗情報</h4>
             <div className="text-sm sm:text-base text-gray-400 space-y-2">
               <p>〒〇〇〇-〇〇〇〇（未定）</p>
               <p>神奈川県○○市寒川町○○○○</p>
@@ -47,7 +58,7 @@ const Footer = () => {
 
           {/* 営業時間 */}
           <div>
-            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-gold">営業時間</h4>
+            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-gradient-gold">営業時間</h4>
             <div className="text-sm sm:text-base text-gray-400 space-y-2">
               <p>平日: 00:00 - 00:00（未定）</p>
               <p>土日祝: 00:00 - 00:00（未定）</p>
@@ -58,10 +69,24 @@ const Footer = () => {
         </div>
 
         {/* SNSリンク */}
-        <div className="flex justify-center space-x-6 mb-8 pt-8 border-t border-gold/30">
+        <div
+          className="flex justify-center space-x-6 mb-8 pt-8 border-t"
+          style={{
+            borderColor: 'rgba(212, 175, 55, 0.3)',
+          }}
+        >
           <a
             href="#"
-            className="text-gray-400 hover:text-gold transition-colors"
+            className="text-gray-400 transition-colors"
+            style={{
+              '--hover-gradient': 'linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = '#D4AF37'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = ''
+            }}
             aria-label="Instagram"
           >
             <svg
@@ -75,7 +100,13 @@ const Footer = () => {
           </a>
           <a
             href="#"
-            className="text-gray-400 hover:text-gold transition-colors"
+            className="text-gray-400 transition-colors"
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = '#D4AF37'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = ''
+            }}
             aria-label="Facebook"
           >
             <svg
@@ -91,7 +122,12 @@ const Footer = () => {
         </div>
 
         {/* コピーライト */}
-        <div className="text-center text-gray-400 text-sm pt-8 border-t border-gold/30">
+        <div
+          className="text-center text-gray-400 text-sm pt-8 border-t"
+          style={{
+            borderColor: 'rgba(212, 175, 55, 0.3)',
+          }}
+        >
           <p>&copy; 2025 蔵のカルビ 寒川店 All Rights Reserved.</p>
         </div>
       </div>

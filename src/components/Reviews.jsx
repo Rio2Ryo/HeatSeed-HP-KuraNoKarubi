@@ -21,7 +21,7 @@ const ReviewCard = ({ name, rating, comment, index }) => {
         </div>
         <div>
           <h4 className="font-bold text-sm sm:text-base text-luxury-black">{name}</h4>
-          <div className="flex text-yellow-500 text-sm sm:text-base">
+          <div className="flex text-gradient-gold-star text-sm sm:text-base">
             {[...Array(5)].map((_, i) => (
               <span key={i}>{i < rating ? '★' : '☆'}</span>
             ))}

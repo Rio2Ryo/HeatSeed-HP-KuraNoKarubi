@@ -40,10 +40,13 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container-custom flex justify-between items-center py-4 px-6">
+      <div className="container-custom flex justify-between items-center py-3 px-3 sm:py-4 sm:px-6">
         {/* ロゴ */}
         <div
-          className="text-2xl font-bold cursor-pointer"
+          className="font-bold cursor-pointer whitespace-nowrap flex-shrink-0"
+          style={{
+            fontSize: 'clamp(0.875rem, 3.5vw, 1.5rem)',
+          }}
           onClick={() => scrollToSection('hero')}
         >
           <span className={isScrolled ? 'text-luxury-black' : 'text-white'}>
@@ -52,12 +55,12 @@ const Header = () => {
         </div>
 
         {/* デスクトップナビゲーション */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-3 lg:space-x-6 xl:space-x-8">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`font-medium transition-colors hover:text-gray-300 ${
+              className={`font-medium transition-colors hover:text-gray-300 whitespace-nowrap text-sm lg:text-base ${
                 isScrolled ? 'text-luxury-black' : 'text-white'
               }`}
             >

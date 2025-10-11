@@ -12,9 +12,9 @@ const RoomCard = ({ name, capacity, description, index, isReversed }) => {
       ref={ref}
       className={`flex flex-col ${
         isReversed ? 'md:flex-row-reverse' : 'md:flex-row'
-      } gap-8 items-center mb-16`}
-      initial={{ opacity: 0, x: isReversed ? 50 : -50 }}
-      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isReversed ? 50 : -50 }}
+      } gap-6 sm:gap-8 items-center mb-12 sm:mb-16`}
+      initial={{ opacity: 0, x: isReversed ? 20 : -20 }}
+      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isReversed ? 20 : -20 }}
       transition={{ duration: 0.8, delay: index * 0.2 }}
     >
       <div className="md:w-1/2 w-full">

@@ -15,7 +15,7 @@ const FeatureCard = ({ title, description, index }) => {
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
     >
-      <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gold">{title}</h3>
+      <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gradient-gold">{title}</h3>
       <p className="text-white leading-relaxed font-medium text-base sm:text-lg">{description}</p>
     </motion.div>
   )
@@ -50,10 +50,15 @@ const Features = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient-gold-rich mb-4">
             私たちの特徴
           </h2>
-          <div className="w-20 h-1 bg-gold mx-auto" />
+          <div
+            className="w-20 h-1 mx-auto"
+            style={{
+              background: 'linear-gradient(90deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%)',
+            }}
+          />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">

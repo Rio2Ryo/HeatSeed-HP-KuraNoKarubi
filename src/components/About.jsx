@@ -15,19 +15,29 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-luxury-black mb-4">
             オーナーのこだわり
           </h2>
-          <div className="w-20 h-1 bg-gold mx-auto" />
+          <div
+            className="w-20 h-1 mx-auto"
+            style={{
+              background: 'linear-gradient(90deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%)',
+            }}
+          />
         </motion.div>
 
-        <div className="flex flex-col md:flex-row gap-12 items-center">
+        <div className="flex flex-col md:flex-row gap-8 sm:gap-12 items-center">
           <motion.div
             className="md:w-1/2"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-full h-64 sm:h-80 md:h-96 bg-luxury-darkGray rounded-lg shadow-lg flex items-center justify-center border-4 border-dashed border-gold">
-              <p className="text-gold text-center px-4 text-sm sm:text-base">
+            <div
+              className="w-full h-64 sm:h-80 md:h-96 bg-luxury-darkGray rounded-lg shadow-lg flex items-center justify-center border-4 border-dashed"
+              style={{
+                borderColor: '#D4AF37',
+              }}
+            >
+              <p className="text-gradient-gold text-center px-4 text-sm sm:text-base">
                 [ 店舗外観・内観写真 ]<br />
                 <span className="text-xs sm:text-sm text-gray-400">※家族で楽しむ雰囲気と上品さを表現</span>
               </p>
@@ -36,7 +46,7 @@ const About = () => {
 
           <motion.div
             className="md:w-1/2"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -52,13 +62,13 @@ const About = () => {
             </p>
             <div className="space-y-2 text-gray-800">
               <p>
-                <span className="font-bold text-gold">店舗名:</span> 蔵のカルビ 寒川店
+                <span className="font-bold text-gradient-gold">店舗名:</span> 蔵のカルビ 寒川店
               </p>
               <p>
-                <span className="font-bold text-gold">コンセプト:</span> 美味しいを、子どもにも。
+                <span className="font-bold text-gradient-gold">コンセプト:</span> 美味しいを、子どもにも。
               </p>
               <p>
-                <span className="font-bold text-gold">こだわり:</span> 仕入れから提供まで、オーナーが一人ひとりに合わせて対応
+                <span className="font-bold text-gradient-gold">こだわり:</span> 仕入れから提供まで、オーナーが一人ひとりに合わせて対応
               </p>
             </div>
           </motion.div>

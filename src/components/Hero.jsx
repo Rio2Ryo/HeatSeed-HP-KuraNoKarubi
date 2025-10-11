@@ -24,18 +24,21 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="text-center z-10 px-4 sm:px-6 bg-black/80 py-8 sm:py-12 rounded-lg max-w-4xl mx-4">
+      <div className="text-center z-10 px-2 sm:px-6 bg-black/80 py-6 sm:py-12 rounded-lg max-w-4xl mx-2 sm:mx-4 w-[calc(100%-1rem)] sm:w-auto">
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 text-white whitespace-nowrap"
+          className="font-bold mb-3 sm:mb-6 text-white whitespace-nowrap leading-tight"
+          style={{
+            fontSize: 'clamp(1.125rem, 5vw, 4rem)',
+          }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <span className="text-gold">美味しい</span>を、<span className="text-gold">子ども</span>にも。
+          <span className="text-gradient-gold-rich">美味しい</span>を、<span className="text-gradient-gold-rich">子ども</span>にも。
         </motion.h1>
 
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 font-light text-white"
+          className="text-base sm:text-xl md:text-2xl mb-2 sm:mb-4 font-light text-white"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -44,7 +47,7 @@ const Hero = () => {
         </motion.p>
 
         <motion.p
-          className="text-sm sm:text-base md:text-lg mb-8 sm:mb-12 text-gray-300 max-w-2xl mx-auto px-4"
+          className="text-xs sm:text-base md:text-lg mb-6 sm:mb-12 text-gray-300 max-w-2xl mx-auto px-2 sm:px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
@@ -55,7 +58,13 @@ const Hero = () => {
 
         <motion.button
           onClick={() => scrollToSection('menu')}
-          className="bg-gold hover:bg-gold-dark text-luxury-black px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold transition-all transform hover:scale-105"
+          className="text-luxury-black px-5 sm:px-8 py-2.5 sm:py-4 rounded-full text-sm sm:text-lg font-bold transition-all transform hover:scale-105"
+          style={{
+            background: 'linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%)',
+          }}
+          whileHover={{
+            background: 'linear-gradient(135deg, #D4AF37 0%, #B8860B 50%, #8B6914 100%)',
+          }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}

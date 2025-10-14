@@ -14,17 +14,22 @@ const Hero = () => {
       id="hero"
       className="relative h-screen flex items-center justify-center bg-black text-white"
     >
-      {/* 背景プレースホルダー（動画エリア） */}
-      <div className="absolute inset-0 bg-black">
-        <div className="absolute inset-0 flex items-center justify-center border-4 border-dashed border-gold/30">
-          <p className="text-gold/50 text-xl text-center px-6">
-            [ トップ動画エリア ]<br />
-            <span className="text-sm text-gray-500">※高級感のある料理やお酒の動画・写真</span>
-          </p>
-        </div>
+      {/* 背景動画 */}
+      <div className="absolute inset-0 bg-black overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
+        >
+          <source src="/media/top-page.mp4" type="video/mp4" />
+        </video>
+        {/* オーバーレイ(動画を少し暗くして文字を読みやすく) */}
+        <div className="absolute inset-0 bg-black/70" />
       </div>
 
-      <div className="text-center z-10 px-2 sm:px-6 bg-black/80 py-6 sm:py-12 rounded-lg max-w-4xl mx-2 sm:mx-4 w-[calc(100%-1rem)] sm:w-auto">
+      <div className="text-center z-10 px-2 sm:px-6 py-6 sm:py-12 max-w-4xl mx-2 sm:mx-4 w-[calc(100%-1rem)] sm:w-auto">
         <motion.h1
           className="font-bold mb-3 sm:mb-6 text-white whitespace-nowrap leading-tight"
           style={{

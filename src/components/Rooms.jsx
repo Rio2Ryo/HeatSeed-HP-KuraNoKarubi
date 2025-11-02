@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
-const RoomCard = ({ name, capacity, description, index, isReversed }) => {
+const RoomCard = ({ name, capacity, description, image, index, isReversed }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -18,10 +18,20 @@ const RoomCard = ({ name, capacity, description, index, isReversed }) => {
       transition={{ duration: 0.8, delay: index * 0.2 }}
     >
       <div className="md:w-1/2 w-full">
-        <div className="w-full h-64 sm:h-72 md:h-80 bg-gray-200 rounded-lg shadow-lg flex items-center justify-center border-4 border-dashed border-gray-300">
-          <p className="text-gray-500 text-center px-4 text-sm sm:text-base">
-            [ {name}の写真 ]
-          </p>
+        <div className="w-full h-64 sm:h-72 md:h-80 bg-gray-200 rounded-lg shadow-lg overflow-hidden">
+          {image ? (
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <p className="text-gray-500 text-center px-4 text-sm sm:text-base">
+                [ {name}の写真 ]
+              </p>
+            </div>
+          )}
         </div>
       </div>
       <div className="md:w-1/2 w-full px-4 sm:px-0">
@@ -36,28 +46,32 @@ const RoomCard = ({ name, capacity, description, index, isReversed }) => {
 const Rooms = () => {
   const rooms = [
     {
-      name: '個室A',
-      capacity: '定員: 〇名様',
+      name: '半個室',
+      capacity: '定員: 4名様',
       description:
-        'お部屋の説明がここに入ります。プライベートな空間で、ゆっくりとお食事をお楽しみいただけます。',
+        '半個室タイプの席で、ほどよいプライベート感を保ちながらお食事をお楽しみいただけます。4名様までご利用いただける空間です。',
+      image: '/media/room1.jpg',
     },
     {
-      name: '個室B',
-      capacity: '定員: 〇名様',
+      name: '完全個室',
+      capacity: '定員: 6名様',
       description:
-        'お部屋の説明がここに入ります。プライベートな空間で、ゆっくりとお食事をお楽しみいただけます。',
+        '完全にプライベートな空間の個室です。ゆっくりとお食事をお楽しみいただけます。6名様までご利用いただける広々とした空間です。',
+      image: '/media/room2.jpg',
     },
     {
-      name: '個室C',
-      capacity: '定員: 〇名様',
+      name: '完全個室（ファミリー向け）',
+      capacity: '定員: 6名様',
       description:
-        'お部屋の説明がここに入ります。プライベートな空間で、ゆっくりとお食事をお楽しみいただけます。',
+        '完全にプライベートな空間の個室です。子供や乳幼児用のおもちゃが備わっており、ファミリーで安心してお食事をお楽しみいただけます。6名様までご利用いただけます。',
+      image: '/media/room3.jpg',
     },
     {
-      name: '個室D',
-      capacity: '定員: 〇名様',
+      name: '完全個室（大部屋）',
+      capacity: '定員: 8名様',
       description:
-        'お部屋の説明がここに入ります。プライベートな空間で、ゆっくりとお食事をお楽しみいただけます。',
+        '完全にプライベートな空間の大部屋タイプの個室です。広々とした空間で、大人数のグループでもゆっくりとお食事をお楽しみいただけます。8名様までご利用いただけます。',
+      image: '/media/room4.jpg',
     },
   ]
 

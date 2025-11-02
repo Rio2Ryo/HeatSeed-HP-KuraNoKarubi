@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
-const MenuItem = ({ name, description, price, isReversed, index }) => {
+const MenuItem = ({ name, description, price, image, isReversed, index }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -19,15 +19,25 @@ const MenuItem = ({ name, description, price, isReversed, index }) => {
     >
       <div className="md:w-1/2 w-full">
         <div
-          className="w-full h-64 sm:h-72 md:h-80 bg-luxury-black rounded-lg shadow-lg flex items-center justify-center border-4 border-dashed"
+          className="w-full h-64 sm:h-72 md:h-80 bg-luxury-black rounded-lg shadow-lg overflow-hidden"
           style={{
-            borderColor: '#D4AF37',
+            border: '4px solid #D4AF37',
           }}
         >
-          <p className="text-gradient-gold text-center px-4 text-sm sm:text-base">
-            [ 商品画像 ]<br />
-            <span className="text-xs sm:text-sm text-gray-400">※高級感のある料理写真</span>
-          </p>
+          {image ? (
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <p className="text-gradient-gold text-center px-4 text-sm sm:text-base">
+                [ 商品画像 ]<br />
+                <span className="text-xs sm:text-sm text-gray-400">※高級感のある料理写真</span>
+              </p>
+            </div>
+          )}
         </div>
       </div>
       <div className="md:w-1/2 w-full px-4 sm:px-0">
@@ -42,22 +52,25 @@ const MenuItem = ({ name, description, price, isReversed, index }) => {
 const Menu = () => {
   const menuItems = [
     {
-      name: '特選カルビ盛り合わせ',
+      name: '特選牛タン盛り合わせ',
       description:
-        '厳選された国産黒毛和牛のカルビを贅沢に盛り合わせました。やわらかく、ジューシーな味わいが特徴です。',
-      price: '¥〇,〇〇〇（価格未定）',
+        '厳選された国産黒毛和牛の牛タン。旨味が凝縮された極上の味わいをお楽しみください。',
+      price: '¥1,780 ～（税込）',
+      image: '/media/20250921_gyutan.jpg',
     },
     {
       name: '厳選お肉コース',
       description:
         '当店自慢の厳選されたお肉を堪能できるコース。前菜からデザートまで、オーナーこだわりの逸品をご堪能ください。',
-      price: '¥〇,〇〇〇（価格未定）',
+      price: '¥6,600 ～（税込）',
+      image: '/media/20250921_niku_set.jpg',
     },
     {
-      name: 'プレミアム日本酒セット',
+      name: 'アルコール',
       description:
         '焼肉との相性抜群の高級日本酒をセレクト。オーナーが厳選した銘酒で、至福のひとときをお楽しみください。',
-      price: '¥〇,〇〇〇（価格未定）',
+      price: '¥399 ～（税込）',
+      image: '/media/20250921_sake.jpg',
     },
   ]
 

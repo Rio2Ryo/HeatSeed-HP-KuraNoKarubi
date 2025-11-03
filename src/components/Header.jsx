@@ -55,7 +55,7 @@ const Header = () => {
         </div>
 
         {/* デスクトップナビゲーション */}
-        <nav className="hidden md:flex space-x-3 lg:space-x-6 xl:space-x-8">
+        <nav className="hidden md:flex items-center space-x-3 lg:space-x-6 xl:space-x-8">
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -67,6 +67,14 @@ const Header = () => {
               {item.name}
             </button>
           ))}
+          <button
+            onClick={() => scrollToSection('reservation')}
+            className={`font-medium transition-colors hover:text-gray-300 whitespace-nowrap text-sm lg:text-base ${
+              isScrolled ? 'text-luxury-black' : 'text-white'
+            }`}
+          >
+            予約
+          </button>
         </nav>
 
         {/* モバイルハンバーガーメニュー */}
@@ -112,6 +120,12 @@ const Header = () => {
                 {item.name}
               </button>
             ))}
+            <button
+              onClick={() => scrollToSection('reservation')}
+              className="text-luxury-black font-medium hover:text-gray-600 transition-colors text-left"
+            >
+              予約
+            </button>
           </nav>
         </motion.div>
       )}

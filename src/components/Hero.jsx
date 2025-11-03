@@ -21,7 +21,12 @@ const Hero = () => {
           loop
           muted
           playsInline
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover opacity-80"
+          onLoadedData={(e) => {
+            // 動画読み込み完了後に再生開始を試みる
+            e.target.play().catch(() => {})
+          }}
         >
           <source src="/media/top-page.mp4" type="video/mp4" />
         </video>

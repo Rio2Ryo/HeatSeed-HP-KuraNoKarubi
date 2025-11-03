@@ -44,7 +44,7 @@ const KodawariCard = ({ title, description, image, index, isReversed }) => {
 
 const About = () => {
   return (
-    <section id="about" className="section-padding" style={{ backgroundColor: '#FFFEF7' }}>
+    <section id="about" className="section-padding" style={{ backgroundColor: '#f6efe8' }}>
       <div className="container-custom">
         <motion.div
           className="text-center mb-16"

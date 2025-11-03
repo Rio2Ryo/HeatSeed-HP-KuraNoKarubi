@@ -31,16 +31,17 @@ const Access = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div
-              className="bg-luxury-darkGray h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden flex items-center justify-center border-4 border-dashed"
-              style={{
-                borderColor: '#D4AF37',
-              }}
-            >
-              <p className="text-gradient-gold text-center px-4 text-sm sm:text-base">
-                [ Google Map 埋め込み ]<br />
-                <span className="text-xs sm:text-sm text-gray-400">※寒川店の地図を表示</span>
-              </p>
+            <div className="h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3253.313110116327!2d139.38305775096265!3d35.372689455483126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601853424a9d3a6d%3A0x2ace5c2a49eb63d!2z5YCL5a6kw5fnhLzogokg6JS144Gu44Kr44Or44OTIOWvkuW3nQ!5e0!3m2!1sja!2sjp!4v1762135888150!5m2!1sja!2sjp"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              />
             </div>
           </motion.div>
 
@@ -64,39 +65,47 @@ const Access = () => {
               <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base">
                 <div>
                   <h4 className="font-bold text-lg mb-2 text-gradient-gold">住所</h4>
-                  <p>〒〇〇〇-〇〇〇〇（未定）</p>
-                  <p>神奈川県○○市寒川町○○○○</p>
+                  <p>〒253-0106</p>
+                  <p>神奈川県高座郡寒川町宮山120-5</p>
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-lg mb-2 text-gradient-gold">電話番号</h4>
-                  <p>000-0000-0000（未定）</p>
+                  <h4 className="font-bold text-lg mb-2 text-gradient-gold">電話番号・FAX</h4>
+                  <p>TEL: 050-5487-1510</p>
+                  <p>FAX: 0467-84-7299</p>
                 </div>
 
                 <div>
                   <h4 className="font-bold text-lg mb-2 text-gradient-gold">営業時間</h4>
-                  <p>平日: 00:00 - 00:00（未定）</p>
-                  <p>土日祝: 00:00 - 00:00（未定）</p>
+                  <p>月～日 ディナー 17:00～24:00</p>
+                  <p className="text-xs sm:text-sm text-gray-500">（L.O. 23:30）</p>
                 </div>
 
                 <div>
                   <h4 className="font-bold text-lg mb-2 text-gradient-gold">定休日</h4>
-                  <p>○曜日（未定）</p>
+                  <p>第1月曜日～木曜日</p>
                 </div>
 
                 <div>
                   <h4 className="font-bold text-lg mb-2 text-gradient-gold">アクセス</h4>
-                  <p>電車: ○○線 寒川駅 徒歩○分（未定）</p>
+                  <p>JR相模線 寒川駅 徒歩8分</p>
+                  <p>JR相模線 宮山駅 徒歩17分</p>
                 </div>
 
                 <div>
                   <h4 className="font-bold text-lg mb-2 text-gradient-gold">駐車場</h4>
-                  <p>駐車場の有無（未定）</p>
+                  <p>有（6台）</p>
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-lg mb-2 text-gradient-gold">個室</h4>
-                  <p>4室完備（プライベート空間でお食事可能）</p>
+                  <h4 className="font-bold text-lg mb-2 text-gradient-gold">平均予算</h4>
+                  <p>通常平均: 3,500円</p>
+                  <p>宴会平均: 4,500円</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-lg mb-2 text-gradient-gold">クレジットカード</h4>
+                  <p className="text-xs sm:text-sm">VISA / MasterCard / JCB / アメリカン・エキスプレス / ダイナースクラブ</p>
                 </div>
               </div>
             </div>

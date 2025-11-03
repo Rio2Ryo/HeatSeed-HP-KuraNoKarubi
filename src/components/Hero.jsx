@@ -1,13 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768) // md breakpoint
+    }
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
   }
+
+  const videoSource = isMobile ? '/media/top-page-tate.mp4' : '/media/top-page-yoko.mp4'
 
   return (
     <section
@@ -17,6 +32,7 @@ const Hero = () => {
       {/* 背景動画 */}
       <div className="absolute inset-0 bg-black overflow-hidden">
         <video
+          key={videoSource}
           autoPlay
           loop
           muted
@@ -28,7 +44,7 @@ const Hero = () => {
             e.target.play().catch(() => {})
           }}
         >
-          <source src="/media/top-page.mp4" type="video/mp4" />
+          <source src={videoSource} type="video/mp4" />
         </video>
         {/* グラデーションオーバーレイ（下部に黒グラデーション） */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black" />

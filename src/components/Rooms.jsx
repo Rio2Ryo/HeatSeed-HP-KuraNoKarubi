@@ -53,25 +53,32 @@ const Rooms = () => {
       image: '/media/room1.jpg',
     },
     {
-      name: '完全個室',
+      name: '完全個室１',
       capacity: '定員: 6名様',
       description:
-        '完全にプライベートな空間の個室です。ゆっくりとお食事をお楽しみいただけます。6名様までご利用いただける広々とした空間です。',
+        '完全にプライベートな空間の個室です。落ち着いた雰囲気でゆっくりとお食事をお楽しみいただけます。6名様までご利用いただける広々とした空間です。',
       image: '/media/room2.jpg',
+    },
+    {
+      name: '完全個室２',
+      capacity: '定員: 6名様',
+      description:
+        '完全にプライベートな空間の個室です。静かな環境でお食事をお楽しみいただけます。6名様までご利用いただける快適な空間です。',
+      image: '/media/room3.jpg',
     },
     {
       name: '完全個室（ファミリー向け）',
       capacity: '定員: 6名様',
       description:
         '完全にプライベートな空間の個室です。子供や乳幼児用のおもちゃが備わっており、ファミリーで安心してお食事をお楽しみいただけます。6名様までご利用いただけます。',
-      image: '/media/room3.jpg',
+      image: '/media/room4.jpg',
     },
     {
       name: '完全個室（大部屋）',
       capacity: '定員: 8名様',
       description:
         '完全にプライベートな空間の大部屋タイプの個室です。広々とした空間で、大人数のグループでもゆっくりとお食事をお楽しみいただけます。8名様までご利用いただけます。',
-      image: '/media/room4.jpg',
+      image: '/media/room5.jpg',
     },
   ]
 
@@ -90,7 +97,7 @@ const Rooms = () => {
           </h2>
           <div className="w-20 h-1 bg-gray-400 mx-auto mb-4" />
           <p className="text-gray-600 text-lg">
-            4つの個室でプライベートな空間をご提供します
+            5つの個室でプライベートな空間をご提供します
           </p>
         </motion.div>
 

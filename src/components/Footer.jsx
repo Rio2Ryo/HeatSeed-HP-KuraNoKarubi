@@ -93,7 +93,7 @@ const Footer = () => {
             <div className="text-sm sm:text-base text-gray-400 space-y-2">
               <p>月～日 ディナー 17:00～24:00</p>
               <p className="text-xs text-gray-500">（L.O. 23:30）</p>
-              <p>定休日: 第1月曜日～木曜日</p>
+              <p>定休日: 第三月曜日と不定休（ご来店前にお電話下さい）</p>
             </div>
           </div>
         </div>

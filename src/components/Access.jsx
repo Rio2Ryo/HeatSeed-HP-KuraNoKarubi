@@ -92,7 +92,7 @@ const Access = () => {
 
                 <div>
                   <h4 className="font-bold text-lg mb-2 text-gradient-gold">定休日</h4>
-                  <p>第1月曜日～木曜日</p>
+                  <p>第三月曜日と不定休（ご来店前にお電話下さい）</p>
                 </div>
 
                 <div>

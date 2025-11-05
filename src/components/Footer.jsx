@@ -12,7 +12,7 @@ const Footer = () => {
           }}
         >
           <a
-            href="tel:050-5487-1510"
+            href="tel:0467-84-7088"
             className="text-luxury-black px-5 sm:px-8 py-2.5 sm:py-4 rounded-full font-bold text-sm sm:text-lg transition-all transform hover:scale-105 text-center whitespace-nowrap"
             style={{
               background: 'linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%)',
@@ -82,7 +82,7 @@ const Footer = () => {
             <div className="text-sm sm:text-base text-gray-400 space-y-2">
               <p>〒253-0106</p>
               <p>神奈川県高座郡寒川町宮山120-5</p>
-              <p>TEL: 050-5487-1510</p>
+              <p>TEL: 0467-84-7088</p>
               <p>FAX: 0467-84-7299</p>
             </div>
           </div>

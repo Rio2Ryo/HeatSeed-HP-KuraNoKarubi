@@ -71,7 +71,7 @@ const Access = () => {
 
                 <div>
                   <h4 className="font-bold text-lg mb-2 text-gradient-gold">電話番号・FAX</h4>
-                  <p>TEL: 050-5487-1510</p>
+                  <p>TEL: 0467-84-7088</p>
                   <p>FAX: 0467-84-7299</p>
                 </div>
 

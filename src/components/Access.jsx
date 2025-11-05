@@ -31,17 +31,26 @@ const Access = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3253.313110116327!2d139.38305775096265!3d35.372689455483126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601853424a9d3a6d%3A0x2ace5c2a49eb63d!2z5YCL5a6kw5fnhLzogokg6JS144Gu44Kr44Or44OTIOWvkuW3nQ!5e0!3m2!1sja!2sjp!4v1762135888150!5m2!1sja!2sjp"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full"
-              />
+            <div className="space-y-6 sm:space-y-8">
+              <div className="w-full h-48 sm:h-64 md:h-80 rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src="/media/20250921_outward.jpg"
+                  alt="蔵のカルビ 寒川店 外観"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3253.313110116327!2d139.38305775096265!3d35.372689455483126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601853424a9d3a6d%3A0x2ace5c2a49eb63d!2z5YCL5a6kw5fnhLzogokg6JS144Gu44Kr44Or44OTIOWvkuW3nQ!5e0!3m2!1sja!2sjp!4v1762135888150!5m2!1sja!2sjp"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                />
+              </div>
             </div>
           </motion.div>
 

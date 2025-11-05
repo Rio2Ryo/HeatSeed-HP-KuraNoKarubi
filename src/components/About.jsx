@@ -76,8 +76,8 @@ const About = () => {
               className="w-full h-64 sm:h-80 md:h-96 bg-luxury-darkGray rounded-lg shadow-lg overflow-hidden"
             >
               <img
-                src="/media/20250921_outward.jpg"
-                alt="蔵のカルビ 寒川店 外観"
+                src="/media/owner.png"
+                alt="オーナー"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -129,7 +129,7 @@ const About = () => {
               key={index}
               {...kodawari}
               index={index}
-              isReversed={index % 2 !== 0}
+              isReversed={index === 0}
             />
           ))}
         </div>

@@ -19,7 +19,7 @@ const MenuItem = ({ name, description, price, image, isReversed, index }) => {
     >
       <div className="md:w-1/2 w-full">
         <div
-          className="w-full h-64 sm:h-72 md:h-80 bg-luxury-black rounded-lg shadow-lg overflow-hidden"
+          className="w-full h-64 sm:h-72 md:h-[400px] bg-luxury-black rounded-lg shadow-lg overflow-hidden"
           style={{
             border: '4px solid #D4AF37',
           }}
